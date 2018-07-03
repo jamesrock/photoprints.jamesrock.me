@@ -74,14 +74,14 @@
 
 	};
 
-	makeRatioComparison(ratios['3:2'], ratios['7:5']);
-	makeRatioComparison(ratios['3:2'], ratios['4:3']);
-
 	makeRatioComparison(ratios['7:5'], ratios['3:2']);
-	makeRatioComparison(ratios['7:5'], ratios['4:3']);
-
 	makeRatioComparison(ratios['4:3'], ratios['3:2']);
+
+	makeRatioComparison(ratios['3:2'], ratios['7:5']);
 	makeRatioComparison(ratios['4:3'], ratios['7:5']);
+
+	makeRatioComparison(ratios['3:2'], ratios['4:3']);
+	makeRatioComparison(ratios['7:5'], ratios['4:3']);
 
 	render();
 
