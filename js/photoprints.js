@@ -39,7 +39,7 @@
 		var
 		out = '\
 		<div class="comparison">\
-			<h3 class="comparison-head">{name}</h3>\
+			<h2 class="comparison-head">{name}</h2>\
 			<div class="comparison-body">\
 				<div class="example orig" style="{styleOne}"></div>\
 				<div class="example new" style="{styleTwo}"></div>\
@@ -74,20 +74,15 @@
 
 	};
 
-	// makeRatioComparison(ratios['3:2'], ratios['3:2']);
 	makeRatioComparison(ratios['3:2'], ratios['7:5']);
 	makeRatioComparison(ratios['3:2'], ratios['4:3']);
 
 	makeRatioComparison(ratios['7:5'], ratios['3:2']);
-	// makeRatioComparison(ratios['7:5'], ratios['7:5']);
 	makeRatioComparison(ratios['7:5'], ratios['4:3']);
 
 	makeRatioComparison(ratios['4:3'], ratios['3:2']);
 	makeRatioComparison(ratios['4:3'], ratios['7:5']);
-	// makeRatioComparison(ratios['4:3'], ratios['4:3']);
 
 	render();
-
-	console.log('ratioComparisons', ratioComparisons);
 
 })();

@@ -11,6 +11,10 @@ body {
 	text-align: center;
 }
 
+h2 {
+	font-weight: normal;
+}
+
 a {
 	text-decoration: none;
 }
@@ -35,13 +39,11 @@ a:hover {
 	border: 0;
 }
 
-.example.orig {
-}
-
 .example.new {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background-color: green;
+	background-color: forestgreen;
 }
