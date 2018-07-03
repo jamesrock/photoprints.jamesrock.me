@@ -44,6 +44,5 @@ a:hover {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: green;
-	background-color: forestgreen;
+	background-color: #0C0;
 }
