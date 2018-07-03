@@ -6,9 +6,9 @@
 		this.size = size;
 
 	},
-	makeRatioComparison = function(originalRatio, cropRatio) {
+	makeRatioComparison = function(originalRatio, cropRatio, variant) {
 
-		ratioComparisons.push(new RatioComparison(originalRatio, cropRatio));
+		ratioComparisons.push(new RatioComparison(originalRatio, cropRatio, variant));
 
 	},
 	ratioComparisons = [],
@@ -28,10 +28,11 @@
 
 	};
 
-	var RatioComparison = function(originalRatio, cropRatio) {
+	var RatioComparison = function(originalRatio, cropRatio, variant) {
 
 		this.originalRatio = originalRatio;
 		this.cropRatio = cropRatio;
+		this.variant = variant;
 
 	};
 	RatioComparison.prototype.render = function() {
@@ -42,15 +43,15 @@
 			<h2 class="comparison-head">{name}</h2>\
 			<div class="comparison-body">\
 				<div class="example orig" style="{styleOne}"></div>\
-				<div class="example new" style="{styleTwo}"></div>\
+				<div class="example new" style="{styleTwo}"><span>{name}</span></div>\
 			</div>\
 		</div>',
 		nameOne = this.originalRatio.getName(),
 		nameTwo = this.cropRatio.getName(),
 		name = [nameOne, nameTwo].join(' > '),
 		cropIsSmaller = this.originalRatio.multiplier<this.cropRatio.multiplier,
-		styleOneWidth = this.originalRatio.getExampleWidth(ppu),
-		styleOneHeight = this.originalRatio.getExampleHeight(ppu),
+		styleOneWidth = (this.originalRatio.getVariantWidth(this.variant)*ppu),
+		styleOneHeight = (this.originalRatio.getVariantHeight(this.variant)*ppu),
 		styleTwoWidth = this.cropRatio.getLongSide(styleOneHeight),
 		styleTwoHeight = styleOneHeight,
 		styleOne,
@@ -74,15 +75,17 @@
 
 	};
 
-	makeRatioComparison(ratios['7:5'], ratios['3:2']);
-	makeRatioComparison(ratios['4:3'], ratios['3:2']);
+	makeRatioComparison(ratios['7:5'], ratios['3:2'], 1);
+	makeRatioComparison(ratios['4:3'], ratios['3:2'], 2);
 
-	makeRatioComparison(ratios['3:2'], ratios['7:5']);
-	makeRatioComparison(ratios['4:3'], ratios['7:5']);
+	makeRatioComparison(ratios['3:2'], ratios['7:5'], 2);
+	makeRatioComparison(ratios['4:3'], ratios['7:5'], 2);
 
-	makeRatioComparison(ratios['3:2'], ratios['4:3']);
-	makeRatioComparison(ratios['7:5'], ratios['4:3']);
+	makeRatioComparison(ratios['3:2'], ratios['4:3'], 2);
+	makeRatioComparison(ratios['7:5'], ratios['4:3'], 1);
 
 	render();
+
+	console.log(ratioComparisons);
 
 })();

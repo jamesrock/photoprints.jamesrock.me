@@ -11,10 +11,6 @@ body {
 	text-align: center;
 }
 
-h2 {
-	font-weight: normal;
-}
-
 a {
 	text-decoration: none;
 }
@@ -28,7 +24,8 @@ a:hover {
 }
 
 .comparison-head {
-	/* margin-bottom: 10px; */
+	font-weight: normal;
+	margin-bottom: 10px;
 }
 
 .comparison-body {
