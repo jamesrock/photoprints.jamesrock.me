@@ -21,19 +21,12 @@ a:hover {
 
 .comparison {
 	margin-bottom: 30px;
-}
-
-.comparison-head {
-	font-weight: normal;
-	margin-bottom: 10px;
-}
-
-.comparison-body {
 	position: relative;
 }
 
 .example {
 	border: 0;
+	font-size: 50px;
 }
 
 .example.new {

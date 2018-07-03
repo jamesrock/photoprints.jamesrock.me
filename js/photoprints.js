@@ -40,11 +40,8 @@
 		var
 		out = '\
 		<div class="comparison">\
-			<h2 class="comparison-head">{name}</h2>\
-			<div class="comparison-body">\
-				<div class="example orig" style="{styleOne}"></div>\
-				<div class="example new" style="{styleTwo}"><span>{name}</span></div>\
-			</div>\
+			<div class="example orig" style="{styleOne}"></div>\
+			<div class="example new" style="{styleTwo}"><span>{name}</span></div>\
 		</div>',
 		nameOne = this.originalRatio.getName(),
 		nameTwo = this.cropRatio.getName(),
