@@ -7,7 +7,7 @@ body {
 	font-family: sans-serif;
 	padding: 20px;
 	font-size: 22px;
-	line-height: 1.2;
+	line-height: 1.4;
 	text-align: center;
 }
 
@@ -17,4 +17,31 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+.comparison {
+	margin-bottom: 30px;
+}
+
+.comparison-head {
+	/* margin-bottom: 10px; */
+}
+
+.comparison-body {
+	position: relative;
+}
+
+.example {
+	border: 0;
+}
+
+.example.orig {
+}
+
+.example.new {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: green;
 }
