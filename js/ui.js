@@ -1,0 +1,5 @@
+(function() {
+
+	ratioComparisons.render();
+
+})();
