@@ -84,4 +84,6 @@
 	ratioComparisons.makeRatioComparison(ratios['3:2'], ratios['4:3'], 2);
 	ratioComparisons.makeRatioComparison(ratios['7:5'], ratios['4:3'], 1);
 
+	ratioComparisons.makeRatioComparison(ratios['1.85:1'], ratios['16:9'], 0);
+
 })();
